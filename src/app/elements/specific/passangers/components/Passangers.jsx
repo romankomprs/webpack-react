@@ -1,8 +1,12 @@
-import React from 'react'
-// import React, { useEffect } from 'react'
-// import { useDispatch } from "react-redux"
-// import { fetchPassengers } from '../actions';
+// import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from "react-redux"
+import { fetchPassengers } from '../actions';
+// import { fetchPassangersSaga } from '../saga/fetchPassangersSaga';
 // import { selectUser } from '../selectors/getPassengers';
+
+import { selectUser } from '../selectors/getPassengers';  
+
 
 // import { useSelector } from 'react-redux'
 
@@ -10,11 +14,11 @@ import React from 'react'
 
  
 const Passangers = () => {    
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //   dispatch(fetchPassengers())      
-    // },[dispatch] )
+    useEffect(() => {
+      dispatch(fetchPassengers())      
+    },[dispatch] )
     
     // const selPassengers = useSelector(selectUser)
     // console.log("selPassengers:", selPassengers)
