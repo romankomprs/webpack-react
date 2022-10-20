@@ -1,17 +1,11 @@
-// import React from 'react'
 import React, { useEffect } from 'react'
 import { useDispatch } from "react-redux"
 import { fetchPassengers } from '../actions';
-// import { fetchPassangersSaga } from '../saga/fetchPassangersSaga';
-// import { selectUser } from '../selectors/getPassengers';
-
 import { selectUser } from '../selectors/getPassengers';  
-
-
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
+import  BasicTable  from "./BasicTable"
 
 // https://webpack.js.org/guides/getting-started/#modules
-
  
 const Passangers = () => {    
     const dispatch = useDispatch();
@@ -29,13 +23,6 @@ const Passangers = () => {
     );
     console.log("listItems", listItems)
 
-    // const bookList= selectUser.map((user, key)=>
-    // <div key={book.id}>
-    //   <li>{user.name}</li>      
-    // </div>
-// )
-
-
   const data = [
     { id: 1, name: "John Doe" },
     { id: 2, name: "Victor Wayne" },
@@ -44,18 +31,16 @@ const Passangers = () => {
 
   return (
     <>
-        <div>Passangers component</div>  
+        {/* <Box components= 'div'>Passangers component</Box>   */}
 
-        <div  className="users">
+        <div className="users">
           {data.map((user, key) => (
-            <li key={key}>{user.name}</li>
-          // <div key={key} className="user">{user}</div>
+            <li key={key}>{user.name}</li>          
         ))}
       </div>
-  
-        {/* Webpack setup */}
-        {/* https://stackoverflow.com/questions/72413406/my-webpack-configuration-for-react-18-shows-uncaught-typeerror-failed-to-resolv   */}
-    </>
+
+      <BasicTable />
+    </> 
   )
 }
 
