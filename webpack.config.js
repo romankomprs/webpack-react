@@ -8,7 +8,22 @@ module.exports = {
         filename: "index_bundle.js"
     },
     resolve:{
-        extensions:['.js','.jsx']
+        extensions:['.js','.jsx'],
+        alias: {
+            src: path.resolve(__dirname, 'src'),
+            app: path.resolve(__dirname, 'src/app/'),            
+            common: path.resolve(__dirname, 'src/app/elements/common'),
+            specific: path.resolve(__dirname, 'src/app/elements/specific'),
+            constants: path.resolve(__dirname, 'src/constants'),
+            helpers: path.resolve(__dirname, 'src/helpers'),
+            http: path.resolve(__dirname, 'src/http'),
+            i18n: path.resolve(__dirname, 'src/i18n'),
+            img: path.resolve(__dirname, 'src/img'),
+            libs: path.resolve(__dirname, 'src/libs'),
+            selectors: path.resolve(__dirname, 'src/selectors'),
+            styles: path.resolve(__dirname, 'src/styles'),
+            images: path.resolve(__dirname, 'static/images'),
+          },
      },
     module: {
         rules: [
