@@ -1,4 +1,4 @@
-import passangers from '../elements/specific/passangers/reducers/passangers'
+import passangers from 'app/elements/specific/passangers/reducers/passangers'
 import { combineReducers } from "redux"
 
 const rootReducer = combineReducers({passangers})
