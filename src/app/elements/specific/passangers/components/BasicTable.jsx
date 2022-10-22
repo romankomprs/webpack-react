@@ -5,7 +5,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import Paper from '@mui/material/Paper';
 import PassengersTableHeader from 'specific/passangers/components/PassengersTableHeader';
-import PassengerTableRow from './PassengerTableRow';
+import PassengerTableRow from 'specific/passangers/components/PassengerTableRow';
 import { map } from 'lodash/fp';
 
 

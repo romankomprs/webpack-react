@@ -1,5 +1,4 @@
 import {get} from 'lodash/fp'
-// import { createSelector } from 'reselect'
 
 const initialState = [
     {name: undefined}
