@@ -1,6 +1,5 @@
 import React from "react";
-import { TableRow } from "@mui/material";
-import { TableCell } from "@mui/material";
+import { TableRow, TableCell } from "@mui/material";
 
 const PassengerTableRow = ({ passenger }) => {
   const { name, calories, fat, carbs, protein } = passenger;

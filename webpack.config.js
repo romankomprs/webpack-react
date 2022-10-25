@@ -9,8 +9,11 @@ module.exports = {
     filename: "index_bundle.js",
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    // extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", "..."],
     alias: {
+      // "ignored-module": false,
+      // "./ignored-module": false,
       src: path.resolve(__dirname, "src"),
       app: path.resolve(__dirname, "src/app/"),
       common: path.resolve(__dirname, "src/app/elements/common"),

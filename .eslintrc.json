@@ -1,0 +1,57 @@
+{
+  "extends": [
+    "plugin:import/recommended",
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier" // prettier must come last in the order, it shuts off other conflicts
+  ],
+  "rules": {
+    "react/prop-types": 0, // 0 means turn off  // typescript is checking it now - better
+    "react/react-in-jsx-scope": 0 // this will make sure that the import works when React is not imported
+  },
+  "plugins": ["react", "import", "jsx-a11y"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".js", ".jsx", ".json"],
+        "moduleDirectory": ["node_modules", "src"]
+        // "moduleDirectory": ["./node_modules", "./src"]
+        // "eslintIgnore": ["node_modules"]
+      },
+      "alias": {
+        "map": [
+          ["src,", "./src"],
+          ["app,", "./src/app"],
+          ["common", "./src/app/elements/common"],
+          ["specific", "./src/app/elements/specific"],
+          ["constants", "./src/constants"],
+          ["helpers", "./src/helpers"],
+          ["http", "./src/http"],
+          ["i18n", "./src/i18n"],
+          ["img", "./src/img"],
+          ["libs", "./src/libs"],
+          ["selectors", "./src/selectors"],
+          ["styles", "./src/styles"],
+          ["images", "./static/images"]
+        ]
+      }
+    }
+  }
+}

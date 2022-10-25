@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchPassengers } from "specific/passangers/actions";
 import { selectUser } from "specific/passangers/selectors/getPassengers";
-import { useSelector } from "react-redux";
-import BasicTable from "specific/passangers/components/BasicTable";
+import BasicTable from "app/elements/specific/passangers/components/BasicTable";
 
 // https://webpack.js.org/guides/getting-started/#modules
 
